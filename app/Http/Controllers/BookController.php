@@ -24,6 +24,10 @@ class BookController extends Controller
     {
         // dd($request->all());
         $book = new Book();
+        if ($request->hasFile('cover')) {
+            $path = $request->cover->store('books', 'public'); // الگوریتم نام گذاری فایل
+            $book->cover = basename($path); // برای یافتن نام فایل بدون مسیر واقعی
+        }
         $book->title = $request->title;
         $book->description = $request->description;
         $book->save();

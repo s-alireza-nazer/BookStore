@@ -1,7 +1,7 @@
 @extends('layouts.layout2')
 @section('content')
 <div class="card" style="width: 18rem;">
-    <img src="..." alt="masterit" class="card-img-top">
+    <img src="{{asset('storage/books/' . $book->cover)}}" alt="master-it" class="card-img-top">
     <div class="card-body">
         <h5 class="card-title">{{$book->title}}</h5>
         <p class="card-text">{{$book->description}}</p>
