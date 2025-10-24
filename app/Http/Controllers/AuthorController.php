@@ -11,7 +11,7 @@ class AuthorController extends Controller
     public function index()
     {
         $authors = Author::all();
-        // dd($publishers);
+        // dd($authors);
         return view('pages.authors.index')
             ->with('authors', $authors);
     }
@@ -25,8 +25,8 @@ class AuthorController extends Controller
     {
         // dd($request->all());
         $author = new Author();
-        $author->title = $request->title;
-        $author->address = $request->address;
+        $author->name = $request->name;
+        $author->family = $request->family;
         $author->save();
         return redirect()->route('authors.index');
     }
@@ -45,8 +45,8 @@ class AuthorController extends Controller
 
     public function update(Author $author, Request $request)
     {
-        $author->title = $request->title;
-        $author->address = $request->address;
+        $author->name = $request->name;
+        $author->family = $request->family;
         $author->save();
         return redirect()->route('authors.index');
     }

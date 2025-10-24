@@ -4,8 +4,8 @@
     <thead>
         <tr>
             <th>#</th>
-            <th>Title</th>
-            <th>Address</th>
+            <th>Name</th>
+            <th>Family</th>
             <th>Operations</th>
         </tr>
     </thead>
@@ -13,8 +13,8 @@
         @foreach($authors as $author)
         <tr>
             <td>{{$loop->iteration}}</td> <!-- ردیف -->
-            <td>{{$author->title}}</td>
-            <td>{{Str::limit($author->address,20,'...')}}</td>
+            <td>{{$author->name}}</td>
+            <td>{{$author->family}}</td>
             <td>
                 <div style="display: flex; gap:10px; align-items: center;">
                     <a href="{{route('authors.show',['author' => $author->id])}}" class="operations-btn">

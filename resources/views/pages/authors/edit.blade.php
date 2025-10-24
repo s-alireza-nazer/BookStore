@@ -6,13 +6,12 @@
             @method('PUT')
             @csrf
             <div class="mb-3">
-                <label for="title">Title</label>
-                <input type="text" class="form-control" name="title" id="title" value="{{$author->title}}">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" id="name" value="{{$author->name}}">
             </div>
             <div class="mb-3">
-                <label for="address">Address</label>
-                <textarea type="text" class="form-control" name="address" id="address"
-                    rows="5">{{$author->address}}</textarea>
+                <label for="family">Family</label>
+                <input type="text" class="form-control" name="family" id="family" value="{{$author->family}}">
             </div>
             <input type="submit" value="Update" class="btn btn-primary w-100">
         </form>

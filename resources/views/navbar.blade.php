@@ -38,7 +38,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{{route('authors.index')}}">List of Authors</a></li>
-                        <li><a class="dropdown-item" href="{{route('authors.create')}}">Create a Authors</a></li>
+                        <li><a class="dropdown-item" href="{{route('authors.create')}}">Create an Author</a></li>
                     </ul>
                 </li>
 
