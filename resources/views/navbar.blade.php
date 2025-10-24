@@ -20,6 +20,28 @@
                         <li><a class="dropdown-item" href="{{route('books.create')}}">Create a Book</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Publishers
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{{route('publishers.index')}}">List of Publishers</a></li>
+                        <li><a class="dropdown-item" href="{{route('publishers.create')}}">Create a Publisher</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Authors
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{{route('authors.index')}}">List of Authors</a></li>
+                        <li><a class="dropdown-item" href="{{route('authors.create')}}">Create a Authors</a></li>
+                    </ul>
+                </li>
+
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
