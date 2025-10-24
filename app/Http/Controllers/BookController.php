@@ -23,14 +23,17 @@ class BookController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
-        $book = new Book();
-        if ($request->hasFile('cover')) {
-            $path = $request->cover->store('books', 'public'); // الگوریتم نام گذاری فایل
-            $book->cover = basename($path); // برای یافتن نام فایل بدون مسیر واقعی
-        }
-        $book->title = $request->title;
-        $book->description = $request->description;
-        $book->save();
+        // $book = new Book();
+        // if ($request->hasFile('cover')) {
+        //     $path = $request->cover->store('books', 'public'); // الگوریتم نام گذاری فایل
+        //     $book->cover = basename($path); // برای یافتن نام فایل بدون مسیر واقعی
+        // }
+        // $book->title = $request->title;
+        // $book->description = $request->description;
+        // $book->save();
+        // return redirect()->route('books.index');
+
+        Book::create($request->all());
         return redirect()->route('books.index');
     }
 
